@@ -16,7 +16,7 @@ M.insert_epitech_header = function()
 end
 
 function M.setup()
-    vim.api.nvim_set_keymap("n", "<Leader>h", ":lua require'epitech.header'.insert_epitech_header()<CR>", { noremap = true, silent = true })
+    vim.api.nvim_set_keymap("n", "<Leader>h", ":lua require'header'.insert_epitech_header()<CR>", { noremap = true, silent = true })
 end
 
 return M
