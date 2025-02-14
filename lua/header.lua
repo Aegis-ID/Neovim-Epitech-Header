@@ -10,7 +10,7 @@ M.insert_epitech_header = function()
         cpp = {"/*", "**", "*/"},
         haskell = {"{-", " -", "-}"},
         python = {"##", "##", "##"},
-        asm = {";;", ";;", ";;"}
+        assembly = {";;", ";;", ";;"}
     }
     local style = comment_styles[filetype] or {"/*", "**", "*/"}
     local header = string.format("%s\n%s EPITECH PROJECT, %s\n%s %s\n%s File description:\n%s %s\n%s",
