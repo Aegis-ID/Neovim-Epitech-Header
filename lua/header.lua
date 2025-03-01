@@ -8,7 +8,7 @@ M.insert_epitech_header = function()
     local comment_styles = {
         c = {"/*", "**", "*/"},
         cpp = {"/*", "**", "*/"},
-        haskell = {"{-", " -", "-}"},
+        haskell = {"{-", "--", "-}"},
         python = {"##", "##", "##"},
         asm = {";", ";;", ";"}
     }
