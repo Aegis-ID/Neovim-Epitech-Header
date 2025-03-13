@@ -2,15 +2,17 @@ local M = {}
 
 M.insert_epitech_header = function()
     local filename = vim.fn.expand("%:t")
+    local filename_no_ext = vim.fn.expand("%:t:r")
     local filetype = vim.bo.filetype
     local current_year = os.date("%Y")
-    local description = vim.fn.input("File description: ")
+    local description = vim.fn.input("File description: ", filename_no_ext)
     local comment_styles = {
         c = {"/*", "**", "*/"},
         cpp = {"/*", "**", "*/"},
         haskell = {"{-", "--", "-}"},
         python = {"##", "##", "##"},
-        asm = {";", ";;", ";"}
+        asm = {";", ";;", ";"},
+        makefile = {"##", "##", "##"},
     }
     local style = comment_styles[filetype] or {"/*", "**", "*/"}
     local header = string.format("%s\n%s EPITECH PROJECT, %s\n%s %s\n%s File description:\n%s %s\n%s",
@@ -23,4 +25,3 @@ function M.setup()
 end
 
 return M
-
