@@ -29,7 +29,7 @@ M.insert_epitech_header = function()
         if guard_name == "" then
             guard_name = default_guard
         end
-        header = header .. "\n\n#ifndef " .. guard_name .. "\n#define " .. guard_name .. "\n\n\n\n#endif /* !" .. guard_name .. " */"
+        header = header .. "\n\n#ifndef " .. guard_name .. "\n    #define " .. guard_name .. "\n\n\n\n#endif /* !" .. guard_name .. " */"
     end
 
     vim.api.nvim_buf_set_lines(0, 0, 0, false, vim.split(header, "\n"))
