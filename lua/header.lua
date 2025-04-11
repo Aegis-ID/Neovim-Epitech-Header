@@ -13,6 +13,7 @@ M.insert_epitech_header = function()
         python = {"##", "##", "##"},
         asm = {";", ";;", ";"},
         makefile = {"##", "##", "##"},
+        cmake = {"##", "##", "##"},
     }
 
     -- Setup the base header
